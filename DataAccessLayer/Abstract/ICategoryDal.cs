@@ -1,14 +1,14 @@
 ﻿using DataAccessLayer.Abstract;
-using EntityLayer;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Abatract
+namespace DataAccessLayer.Abstract
 {
-    public interface ICategoryDal:IRepository<Category>
+    public interface ICategoryDal:IRepository<Category> //IRepository interfacei içindeki methodları alıyor
     {
        
     }
