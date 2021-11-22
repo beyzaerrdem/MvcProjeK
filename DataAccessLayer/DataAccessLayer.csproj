@@ -56,6 +56,7 @@
     <Compile Include="Abstract\IContactDal.cs" />
     <Compile Include="Abstract\IContentDal.cs" />
     <Compile Include="Abstract\IHeadingDal.cs" />
+    <Compile Include="Abstract\IMessageDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="EntityFramework\EFContactDal.cs" />
     <Compile Include="EntityFramework\EFContentDal.cs" />
     <Compile Include="EntityFramework\EFHeadingDal.cs" />
+    <Compile Include="EntityFramework\EFMassageDal.cs" />
     <Compile Include="EntityFramework\EFWriterDal.cs" />
     <Compile Include="Migrations\202110061046132_mig1.cs" />
     <Compile Include="Migrations\202110061046132_mig1.designer.cs">
@@ -74,6 +76,30 @@
     <Compile Include="Migrations\202110181116297_mig_writer_edit.cs" />
     <Compile Include="Migrations\202110181116297_mig_writer_edit.designer.cs">
       <DependentUpon>202110181116297_mig_writer_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110201035097_mig_writer_addstatus.cs" />
+    <Compile Include="Migrations\202110201035097_mig_writer_addstatus.designer.cs">
+      <DependentUpon>202110201035097_mig_writer_addstatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110211334333_mig_contentstatusadd.cs" />
+    <Compile Include="Migrations\202110211334333_mig_contentstatusadd.designer.cs">
+      <DependentUpon>202110211334333_mig_contentstatusadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110211339156_mig_headingastatusadd.cs" />
+    <Compile Include="Migrations\202110211339156_mig_headingastatusadd.designer.cs">
+      <DependentUpon>202110211339156_mig_headingastatusadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111011232356_mig_add_message.cs" />
+    <Compile Include="Migrations\202111011232356_mig_add_message.designer.cs">
+      <DependentUpon>202111011232356_mig_add_message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111211417248_mig_contact_adddate.cs" />
+    <Compile Include="Migrations\202111211417248_mig_contact_adddate.designer.cs">
+      <DependentUpon>202111211417248_mig_contact_adddate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111220956586_mig_imagefile.cs" />
+    <Compile Include="Migrations\202111220956586_mig_imagefile.designer.cs">
+      <DependentUpon>202111220956586_mig_imagefile.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,6 +120,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110181116297_mig_writer_edit.resx">
       <DependentUpon>202110181116297_mig_writer_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110201035097_mig_writer_addstatus.resx">
+      <DependentUpon>202110201035097_mig_writer_addstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110211334333_mig_contentstatusadd.resx">
+      <DependentUpon>202110211334333_mig_contentstatusadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110211339156_mig_headingastatusadd.resx">
+      <DependentUpon>202110211339156_mig_headingastatusadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111011232356_mig_add_message.resx">
+      <DependentUpon>202111011232356_mig_add_message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111211417248_mig_contact_adddate.resx">
+      <DependentUpon>202111211417248_mig_contact_adddate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111220956586_mig_imagefile.resx">
+      <DependentUpon>202111220956586_mig_imagefile.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
