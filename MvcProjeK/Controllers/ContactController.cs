@@ -33,10 +33,10 @@ namespace MvcProjeK.Controllers
 
         public PartialViewResult MessageListMenu()
         {
+            
             ViewBag.ContactCount = cm.GetList().Count;
-            ViewBag.InboxCount = mm.GetListInbox().Count;
+            ViewBag.InboxCount = mm.GetListInbox().Where(x=>x.IsReading == false).ToList().Count; //okunmamış mesajlarının sayısı
             ViewBag.SendBoxCount = mm.GetListSendBox().Count;
-
             return PartialView();
         }
     }

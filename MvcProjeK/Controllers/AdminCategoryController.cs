@@ -15,6 +15,7 @@ namespace MvcProjeK.Controllers
     {
         CategoryManager cm = new CategoryManager (new EFCategoryDal());
 
+        [Authorize(Roles ="B")] //belirli eylemlerin erişimini kısıtlamak için
         public ActionResult Index()
         {
             var categoryvalues = cm.GetList();

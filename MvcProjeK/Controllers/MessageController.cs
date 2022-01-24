@@ -18,28 +18,33 @@ namespace MvcProjeK.Controllers
         MessageValidatior messageValidatior = new MessageValidatior();
 
         // GET: Message
-        public ActionResult Inbox()
+        [Authorize]
+        public ActionResult Inbox(string p)
         {
-            var messageList = mm.GetListInbox();
+            var messageList = mm.GetListInbox(p);
 
             return View(messageList);
         }
 
-        public ActionResult SendBox()
+        public ActionResult SendBox(string p)
         {
-            var messageList = mm.GetListSendBox();
+            var messageList = mm.GetListSendBox(p);
             return View(messageList);
         }
 
         public ActionResult GetInboxMessageDetails(int id)
         {
             var values = mm.GetByID(id);
+            values.IsReading = true;
+            mm.MessageUpdate(values);
             return View(values);
         }
 
         public ActionResult GetSendBoxMessageDetails(int id)
         {
             var values = mm.GetByID(id);
+            values.IsReading = true;
+            mm.MessageUpdate(values);
             return View(values);
         }
 

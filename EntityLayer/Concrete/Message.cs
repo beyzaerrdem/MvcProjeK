@@ -21,5 +21,7 @@ namespace EntityLayer.Concrete
         public string MessageContent { get; set; }
      
         public DateTime MessageDate { get; set; }
+
+        public bool IsReading { get; set; } //okundu bilgisi
     }
 }

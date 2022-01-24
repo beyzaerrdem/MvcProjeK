@@ -36,5 +36,14 @@ namespace MvcProjeK.Controllers
         {
             return PartialView();
         }
+
+
+        public ActionResult ChangeStatus(int id)
+        {
+            var about = abm.GetByID(id);
+            about.AboutStatus = !about.AboutStatus;
+            abm.AboutUpdate(about);
+            return RedirectToAction("Index");
+        }
     }
 }
