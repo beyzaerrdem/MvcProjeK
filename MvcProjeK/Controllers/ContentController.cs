@@ -18,6 +18,12 @@ namespace MvcProjeK.Controllers
             return View();
         }
 
+        public ActionResult GetAllContent(string p)
+        {
+            var values = cm.GetList(p);
+            return View(values);
+        }
+
         public ActionResult ContentByHeading(int id)
         {
             var contentvalues = cm.GetListByHeadingID(id);

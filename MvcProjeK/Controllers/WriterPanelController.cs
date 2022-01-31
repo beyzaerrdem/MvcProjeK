@@ -55,11 +55,11 @@ namespace MvcProjeK.Controllers
         }
 
 
-        public ActionResult MyHeading(string p)
+        public ActionResult MyHeading(int d=1)
         {
-            p = (string)Session["WriterMail"];
+            string p = (string)Session["WriterMail"];
             var writeridinfo = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterID).FirstOrDefault();
-            var values = hm.GetListByWriter(writeridinfo);
+            var values = hm.GetListByWriter(writeridinfo).ToPagedList(d,2);
             return View(values);
         }
 
