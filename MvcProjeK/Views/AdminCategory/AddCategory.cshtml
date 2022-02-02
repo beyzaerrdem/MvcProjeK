@@ -4,23 +4,56 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+
 <h1>Yeni Kategori Sayfası</h1>
 <br />
 
-@using (Html.BeginForm("AddCategory", "AdminCategory", FormMethod.Post))
+@using (Html.BeginForm("AddCategory", "AdminCategory", FormMethod.Post,new { id = "form1"}))
 {
-    <div class="form-group">
-        @Html.Label("Kategori Adı")
-        @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.CategoryName)
-        <br /> <br />
+<div class="form-group">
+    @Html.Label("Kategori Adı")
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CategoryName)
+    <br /> <br />
 
-        @Html.Label("Açıklamayı yapınız")
-        @Html.TextAreaFor(x => x.CategoryDescription, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.CategoryDescription)
-        <br />
-        <button class="btn btn-primary">Kaydet</button>
-    </div>
+    @Html.Label("Açıklamayı yapınız")
+    @Html.TextAreaFor(x => x.CategoryDescription, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CategoryDescription)
+    <br />
+    <button class="btn btn-primary" id="btn1">Kaydet</button>
+
+    <script>
+        // AJAX Form Post
+        $(document).ready(function () {
+            $("#form1").submit(function (e) {
+                // Formun gönderilme olayının sıfırlanması.
+                e.preventDefault();
+                // Formdaki datanın alınması.
+                var form = $('#form1').serialize();
+                // Formdaki action url'sinin alınması.
+                var url = $('#form1').attr('action');
+                $.ajax({
+                    type: 'post',
+                    url: url,
+                    data: form,
+                    // Başarılı olursa çalışan kod.
+                    success: function (response) {
+                        // Formdaki değerleri sıfırlar.
+                        $("#form1").trigger("reset");
+                        swal("Başarılı!", "Kategori başarıyla eklendi!", "success");
+                    },
+                    // Başarısız olursa çalışan kod.
+                    error: function (response) {
+                        swal("Hata!", "Kategori eklenemedi!", "error");
+                    },
+                });
+            });
+        });
+    </script>
+
+</div>
 }
 
 

@@ -4,8 +4,6 @@
     Layout = null;
 }
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="~/Scripts/jquery-3.4.1.js"></script>
 
 <h1>Yeni Kategori Sayfası</h1>
 <br />
@@ -22,18 +20,8 @@
         @Html.TextBoxFor(x => x.CategoryDescription, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.CategoryDescription)
         <br />
-
-        <button class=" btn btn-info" id="btn1">Kaydet</button>
-
-        <script>
-            $('#btn1').click(function () {
-                swal("Tebrikler!", "Başarılı bir şekilde eklendi!", "success");
-            });
-        </script>
-
+        <button>Kaydet</button>
     </div>
-
-
 }
 
 

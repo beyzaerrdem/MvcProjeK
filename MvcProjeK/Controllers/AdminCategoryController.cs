@@ -38,7 +38,7 @@ namespace MvcProjeK.Controllers
             if (results.IsValid)
             {
                 cm.CategoryAdd(x);
-                return RedirectToAction("Index");
+                return new HttpStatusCodeResult(System.Net.HttpStatusCode.OK);
             }
             else
             {
@@ -47,7 +47,7 @@ namespace MvcProjeK.Controllers
                     ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
                 }
             }
-            return View();
+            return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
         }
 
 
