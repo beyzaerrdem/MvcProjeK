@@ -60,6 +60,7 @@
     <Compile Include="Abstract\ILoginDal.cs" />
     <Compile Include="Abstract\IMessageDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Abstract\ISkillDal.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="EntityFramework\EFImageFileDal.cs" />
     <Compile Include="EntityFramework\EFLoginDal.cs" />
     <Compile Include="EntityFramework\EFMassageDal.cs" />
+    <Compile Include="EntityFramework\EFSkillDal.cs" />
     <Compile Include="EntityFramework\EFWriterDal.cs" />
     <Compile Include="Migrations\202110061046132_mig1.cs" />
     <Compile Include="Migrations\202110061046132_mig1.designer.cs">
@@ -116,6 +118,10 @@
     <Compile Include="Migrations\202111271129118_mig_add_messageread.cs" />
     <Compile Include="Migrations\202111271129118_mig_add_messageread.designer.cs">
       <DependentUpon>202111271129118_mig_add_messageread.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202011419372_mig_skill.cs" />
+    <Compile Include="Migrations\202202011419372_mig_skill.designer.cs">
+      <DependentUpon>202202011419372_mig_skill.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -163,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111271129118_mig_add_messageread.resx">
       <DependentUpon>202111271129118_mig_add_messageread.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202011419372_mig_skill.resx">
+      <DependentUpon>202202011419372_mig_skill.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

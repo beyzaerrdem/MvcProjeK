@@ -151,6 +151,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\SkillCardController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\WriterController.cs" />
     <Compile Include="Controllers\WriterPanelContentController.cs" />
     <Compile Include="Controllers\WriterPanelController.cs" />
@@ -2074,6 +2076,16 @@
     <Content Include="AdminLTE-3.0.4\web1\webfonts\fa-brands-400.svg" />
     <Content Include="AdminLTE-3.0.4\web1\webfonts\fa-regular-400.svg" />
     <Content Include="AdminLTE-3.0.4\web1\webfonts\fa-solid-900.svg" />
+    <Content Include="AdminLTE-3.0.4\web\css\style.css" />
+    <Content Include="AdminLTE-3.0.4\web\images\5.jpg" />
+    <Content Include="AdminLTE-3.0.4\web\images\img1.jpg" />
+    <Content Include="AdminLTE-3.0.4\web\images\sprite.png" />
+    <Content Include="AdminLTE-3.0.4\web\index.html" />
+    <Content Include="AdminLTE-3.0.4\web\js\bars.js" />
+    <Content Include="AdminLTE-3.0.4\web\js\easyResponsiveTabs.js" />
+    <Content Include="AdminLTE-3.0.4\web\js\jquery-1.11.1.min.js" />
+    <Content Include="AdminLTE-3.0.4\web\js\jquery.circlechart.js" />
+    <Content Include="AdminLTE-3.0.4\web\w3layouts-License.txt" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -2625,6 +2637,8 @@
     <Content Include="Views\Content\GetAllContent.cshtml" />
     <Content Include="Views\Chart\Index.cshtml" />
     <Content Include="Views\Heading\HeadingReport.cshtml" />
+    <Content Include="Views\SkillCard\Index.cshtml" />
+    <Content Include="Views\Test\SweetAlert.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
