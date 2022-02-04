@@ -5,10 +5,13 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+
 <h1>Yeni Admin Ekleme Sayfası</h1>
 <br />
 
-@using (Html.BeginForm("AddAdmin", "Authorization", FormMethod.Post))
+@using (Html.BeginForm("AddAdmin", "Authorization", FormMethod.Post, new { id = "form2" }))
 {
     <div class="form-group">
         @Html.Label("Admin Kullanıcı Adı")
@@ -21,7 +24,36 @@
         @Html.Label("Rol")
         @Html.TextBoxFor(x => x.AdminRole, new { @class = "form-control" })
         <br />
-        <button class="btn btn-primary" id="btn1">Kaydet</button>
+        <button class="btn btn-primary" id="btn2">Kaydet</button>
+
+        <script>
+            // AJAX Form Post
+            $(document).ready(function () {
+                $("#form2").submit(function (e) {
+                    // Formun gönderilme olayının sıfırlanması.
+                    e.preventDefault();
+                    // Formdaki datanın alınması.
+                    var form = $('#form2').serialize();
+                    // Formdaki action url'sinin alınması.
+                    var url = $('#form2').attr('action');
+                    $.ajax({
+                        type: 'post',
+                        url: url,
+                        data: form,
+                        // Başarılı olursa çalışan kod.
+                        success: function (response) {
+                            // Formdaki değerleri sıfırlar.
+                            $("#form2").trigger("reset");
+                            swal("Başarılı!", "Admin başarıyla eklendi!", "success");
+                        },
+                        // Başarısız olursa çalışan kod.
+                        error: function (response) {
+                            swal("Hata!", "Admin eklenemedi!", "error");
+                        },
+                    });
+                });
+            });
+        </script>
 
     </div>
 
