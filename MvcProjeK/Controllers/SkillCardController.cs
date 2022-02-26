@@ -19,6 +19,12 @@ namespace MvcProjeK.Controllers
             return View(skillvalues);
         }
 
+        public ActionResult ListSkill()
+        {
+            var skillvalues = sm.GetList();
+            return View(skillvalues);
+        }
+
         [HttpGet]
         public ActionResult AddSkill()
         {
@@ -42,6 +48,13 @@ namespace MvcProjeK.Controllers
         public ActionResult UpdateSkill(Skill p)
         {
             sm.SkillUpdate(p);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DeleteSkill(int id)
+        {
+            var skillvalues = sm.GetById(id);
+            sm.SkillDelete(skillvalues);
             return RedirectToAction("Index");
         }
     }

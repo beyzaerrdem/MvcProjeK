@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "AddSkill";
-    Layout = null;
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <h1>Yeni Admin Ekleme Sayfası</h1>
@@ -19,7 +19,7 @@
         @Html.TextBoxFor(x => x.SkillLevel, new { @class = "form-control" })
         <br />
 
-        <button class="btn btn-primary" >Kaydet</button>
+        <button class="btn btn-primary">Kaydet</button>
 
      </div>
 

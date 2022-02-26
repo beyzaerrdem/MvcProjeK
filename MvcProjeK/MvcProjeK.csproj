@@ -2645,6 +2645,7 @@
     <Content Include="Views\Authorization\UpdateAdmin.cshtml" />
     <Content Include="Views\SkillCard\AddSkill.cshtml" />
     <Content Include="Views\SkillCard\UpdateSkill.cshtml" />
+    <Content Include="Views\SkillCard\ListSkill.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
